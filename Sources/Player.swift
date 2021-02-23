@@ -462,6 +462,11 @@ extension Player {
         self._avplayer.seek(to: CMTime.zero)
         self.playFromCurrentTime()
     }
+    
+    open func playFrom(time: CMTime){
+        self._avplayer.seek(to: time)
+        self.playFromCurrentTime()
+    }
 
     /// Begins playback of the media from the current time.
     open func playFromCurrentTime() {
